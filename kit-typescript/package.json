@@ -47,6 +47,7 @@
     "yargs": "^2.1.1"
   },
   "jspm": {
+    "directories": {},
     "dependencies": {
       "aurelia-animator-css": "npm:aurelia-animator-css@^1.0.0-beta.1",
       "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1",
@@ -65,9 +66,7 @@
       "text": "github:systemjs/plugin-text@^0.0.3"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.6.4",
-      "babel-runtime": "npm:babel-runtime@^5.6.4",
-      "core-js": "npm:core-js@^1.2.6"
+      "typescript": "github:mhegazy/typescript@v1.5-beta2"
     },
     "overrides": {
       "npm:core-js@1.2.6": {
