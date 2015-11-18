@@ -1,21 +1,32 @@
 System.config({
-  "baseURL": "/",
-  "defaultJSExtensions": true,
-  "transpiler": "typescript",
-  "typescriptOptions": {
-    "target": "ES5",
-    "module": "amd",
-    "experimentalDecorators": true
+  baseURL: ".",
+  defaultJSExtensions: true,
+  transpiler: false,
+  typescriptOptions: {
+    "tsconfig": true
   },
-  "paths": {
-    "*": "src/*",
+  paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  }
-});
+  },
 
-System.config({
-  "map": {
+  packages: {
+    "app": {
+      "main": "app",
+      "defaultExtension": "ts",
+      "meta": {
+        "*.ts": {
+          "loader": "ts"
+        },
+        "*.js": {
+          "loader": "ts"
+        }
+      }
+    }
+  },
+
+  map: {
+    "app": "src",
     "aurelia-animator-css": "npm:aurelia-animator-css@1.0.0-beta.1.0.1",
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0-beta.1",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.0-beta.1",
@@ -28,10 +39,17 @@ System.config({
     "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.1.0.1",
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.1.0.1",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
+    "core-js": "npm:core-js@1.2.6",
     "fetch": "github:github/fetch@0.10.1",
     "font-awesome": "npm:font-awesome@4.4.0",
     "text": "github:systemjs/plugin-text@0.0.3",
-    "typescript": "github:mhegazy/typescript@v1.5-beta2",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.92",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.92",
+    "ts": "github:frankwallis/plugin-typescript@2.2.2",
+    "typescript": "npm:typescript@1.6.2",
+    "github:frankwallis/plugin-typescript@2.2.2": {
+      "typescript": "npm:typescript@1.6.2"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
